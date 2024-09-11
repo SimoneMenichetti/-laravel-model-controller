@@ -22,4 +22,6 @@ Route::get('/contatti', [PageController::class, 'about'])->name('about');
 Route::get('/chi-siamo', [PageController::class, 'contacts'])->name('contacts');
 
 
-Route::get('/Movies', [PageController::class, 'movie'])->name('movies');
+Route::get('/Movies', [PageController::class, 'movies'])->name('movies');
+
+Route::get('/movies/{id}', [PageController::class, 'show'])->name('movies.show');

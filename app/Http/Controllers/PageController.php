@@ -19,6 +19,13 @@ class PageController extends Controller
         return view('movies', compact('movies',));
     }
 
+    public function show($id)
+    {
+        $movie = Movie::findOrFail($id);
+
+        return view('movie-details', compact('movie'));
+    }
+
 
     public function about()
     {
